@@ -1,4 +1,4 @@
 /target
-.DS_Store
-/nbproject/private/
-/nbactions.xml
+/.settings
+/.classpath
+/.project
