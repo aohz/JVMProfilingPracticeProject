@@ -35,10 +35,7 @@ import org.mybatis.jpetstore.domain.Product;
 import org.mybatis.jpetstore.service.AccountService;
 import org.mybatis.jpetstore.service.CatalogService;
 
-/**
- * @author Eduardo Macarron
- *
- */
+
 @SessionScope
 public class AccountActionBean extends AbstractActionBean {
 

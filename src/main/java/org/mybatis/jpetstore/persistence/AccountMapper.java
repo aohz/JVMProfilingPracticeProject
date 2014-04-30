@@ -18,10 +18,8 @@ package org.mybatis.jpetstore.persistence;
 
 import org.mybatis.jpetstore.domain.Account;
 
-/**
- * @author Eduardo Macarron
- *
- */
+
+
 public interface AccountMapper {
 
   Account getAccountByUsername(String username);

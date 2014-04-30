@@ -20,10 +20,7 @@ import java.util.List;
 
 import org.mybatis.jpetstore.domain.Category;
 
-/**
- * @author Eduardo Macarron
- *
- */
+
 public interface CategoryMapper {
 
   List<Category> getCategoryList();

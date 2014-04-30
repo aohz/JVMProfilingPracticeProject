@@ -21,10 +21,8 @@ import java.util.Map;
 
 import org.mybatis.jpetstore.domain.Item;
 
-/**
- * @author Eduardo Macarron
- *
- */
+
+
 public interface ItemMapper {
 
   void updateInventoryQuantity(Map<String, Object> param);

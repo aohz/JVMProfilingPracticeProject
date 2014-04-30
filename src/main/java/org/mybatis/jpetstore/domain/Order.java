@@ -23,10 +23,8 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
-/**
- * @author Eduardo Macarron
- *
- */
+
+
 public class Order implements Serializable {
 
   private static final long serialVersionUID = 6321792448424424931L;

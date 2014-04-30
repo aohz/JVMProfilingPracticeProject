@@ -19,10 +19,8 @@ package org.mybatis.jpetstore.domain;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
-/**
- * @author Eduardo Macarron
- *
- */
+
+
 public class Item implements Serializable {
 
   private static final long serialVersionUID = -2159121673445254631L;

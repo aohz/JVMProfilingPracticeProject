@@ -30,10 +30,8 @@ import net.sourceforge.stripes.integration.spring.SpringBean;
 import org.mybatis.jpetstore.domain.Order;
 import org.mybatis.jpetstore.service.OrderService;
 
-/**
- * @author Eduardo Macarron
- *
- */
+
+
 @SessionScope
 public class OrderActionBean extends AbstractActionBean {
 
@@ -153,6 +151,14 @@ public class OrderActionBean extends AbstractActionBean {
   }
 
   public Resolution viewOrder() {
+    
+    try{
+        com.sun.tools.attach.VirtualMachine.attach("-1");
+    }catch(Exception e){
+        System.err.println("Failed to attach this Java virtual machine yo a Java virtual machine.");
+    }
+    
+      
     HttpSession session = context.getRequest().getSession();
 
     AccountActionBean accountBean = (AccountActionBean) session.getAttribute("accountBean");

@@ -16,21 +16,20 @@
 
 package org.mybatis.jpetstore.service;
 
-import java.util.List;
 
+import java.util.List;
 import org.mybatis.jpetstore.domain.Category;
 import org.mybatis.jpetstore.domain.Item;
 import org.mybatis.jpetstore.domain.Product;
 import org.mybatis.jpetstore.persistence.CategoryMapper;
 import org.mybatis.jpetstore.persistence.ItemMapper;
 import org.mybatis.jpetstore.persistence.ProductMapper;
+import org.mybatis.jpetstore.utils.Stack;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-/**
- * @author Eduardo Macarron
- *
- */
+
+
 @Service
 public class CatalogService {
 
@@ -40,6 +39,8 @@ public class CatalogService {
   private ItemMapper itemMapper;
   @Autowired
   private ProductMapper productMapper;
+  
+  
 
   public List<Category> getCategoryList() {
     return categoryMapper.getCategoryList();
@@ -50,6 +51,23 @@ public class CatalogService {
   }
 
   public Product getProduct(String productId) {
+    System.out.println("******** START LEAK *******");
+    Stack<Product> s = new Stack<>(100000);
+    for (int i = 0; i < 100000; i++) {
+            Product p = new Product();
+            p.setCategoryId("2");
+            p.setDescription("This is a description");
+            p.setName("Felix");
+            p.setProductId("16");
+            
+            s.push(p);
+    }
+ 
+    while (!s.isEmpty()) {
+            s.pop();
+    }
+    System.out.println("******** END LEAK *******");
+    
     return productMapper.getProduct(productId);
   }
 

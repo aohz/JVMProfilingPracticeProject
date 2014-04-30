@@ -20,10 +20,7 @@ import java.util.List;
 
 import org.mybatis.jpetstore.domain.Order;
 
-/**
- * @author Eduardo Macarron
- *
- */
+
 public interface OrderMapper {
 
   List<Order> getOrdersByUsername(String username);

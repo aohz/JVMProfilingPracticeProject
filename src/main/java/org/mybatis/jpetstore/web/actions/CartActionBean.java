@@ -30,10 +30,7 @@ import org.mybatis.jpetstore.domain.CartItem;
 import org.mybatis.jpetstore.domain.Item;
 import org.mybatis.jpetstore.service.CatalogService;
 
-/**
- * @author Eduardo Macarron
- *
- */
+
 @SessionScope
 public class CartActionBean extends AbstractActionBean {
 
