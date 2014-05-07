@@ -40,12 +40,6 @@
         <system></system>
         <url></url>
     </ciManagement>
-<!--    <distributionManagement>
-        <site>
-            <id>github</id>
-            <url>gitsite:git@github.com/jesusjavierdediego/JVMProfilingPracticeProject.git</url>
-        </site>
-    </distributionManagement>-->
     <dependencies>
         <dependency>
             <groupId>org.mybatis</groupId>
